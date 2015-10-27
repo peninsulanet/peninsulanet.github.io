@@ -1,0 +1,43 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <ul>
+      <template is="dom-repeat" items="{{items}}">
+        <li><span class="paper-font-body1">{{item}}</span></li>
+      </template>
+    </ul>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'my-list',
+        properties: {
+          items: {
+            type: Array,
+            notify: true,
+          }
+        },
+        ready: function() {
+          this.items = [
+            'Pessoas felizes',
+            'Partituras incríveis',
+            'Audios inspiradore',
+            'Fotografias',
+            'Videos',
+            'e mais ...'
+          ];
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

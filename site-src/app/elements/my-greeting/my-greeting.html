@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-greeting">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2 class="page-title"><span>{{greeting}}</span></h2>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+      
+      Polymer({
+        is: 'my-greeting',
+
+        properties: {
+          greeting: {
+            type: String,
+            value: 'Bemvindo ao site do Coral da Península!',
+            notify: true
+          }
+        }
+      });
+    })();
+  </script>
+
+</dom-module>
