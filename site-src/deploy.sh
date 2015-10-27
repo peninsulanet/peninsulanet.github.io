@@ -24,9 +24,9 @@ cp dist/manifest.json ../
 cp dist/robots.txt ../
 cp dist/sw-import.js ../
 cd ..
-ln -s site-src/dist/bower_components bower_components
-ln -s site-src/dist/elements elements
-ln -s site-src/dist/images images
-ln -s site-src/dist/scripts scripts
-ln -s site-src/dist/styles styles
-ln -s site-src/dist/sw-toolbox sw-toolbox
+cp -R site-src/dist/bower_components bower_components
+cp -R site-src/dist/elements elements
+cp -R site-src/dist/images images
+cp -R site-src/dist/scripts scripts
+cp -R site-src/dist/styles styles
+cp -R site-src/dist/sw-toolbox sw-toolbox
